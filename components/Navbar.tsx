@@ -30,6 +30,7 @@ export default function Navbar() {
           <li><a href="/#why" onClick={closeMenu}>Por que a NAVI</a></li>
           <li><a href="/#testimonials" onClick={closeMenu}>Depoimentos</a></li>
           <li><Link href="/blog" onClick={closeMenu}>Blog</Link></li>
+          <li><Link href="/cursos" onClick={closeMenu}>Cursos</Link></li>
         </ul>
 
         <div className="nav-cta">
