@@ -1393,6 +1393,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .sem .curso-why-item-icon { background: #FFE8E8; color: #C0392B; }
 .com .curso-why-item-icon { background: rgba(74,163,191,.2); color: var(--accent-soft); }
+.curso-why-item-text { min-width: 0; }
 .curso-why-item-text strong { display: block; font-size: .88rem; font-weight: 700; margin-bottom: 3px; }
 .sem .curso-why-item-text strong { color: #C0392B; }
 .com .curso-why-item-text strong { color: var(--white); }
@@ -1589,6 +1590,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .curso-moments-grid { grid-template-columns: repeat(2, 1fr); }
   .curso-guarantee-inner { flex-direction: column; text-align: center; gap: 32px; }
   .curso-why-col.com { order: -1; }
+  .curso-why-col { padding: 28px 24px; }
+  .curso-why-col-title { font-size: 1rem; margin-bottom: 20px; }
 }
 @media (max-width: 480px) {
   .curso-moments-grid { grid-template-columns: 1fr 1fr; }
