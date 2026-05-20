@@ -1217,6 +1217,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   letter-spacing: .08em;
   text-transform: uppercase;
   padding: 18px 40px;
+  white-space: normal;
+  text-align: center;
+  word-break: break-word;
 }
 .btn-curso:hover {
   background: #b8934e;
@@ -1362,7 +1365,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .curso-why-title span { color: var(--gold); }
 .curso-why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.curso-why-col { border-radius: var(--radius-xl); padding: 44px; }
+.curso-why-col { border-radius: var(--radius-xl); padding: 44px; overflow: hidden; }
 .curso-why-col.sem { background: #FFF6F6; border: 1.5px solid #FFDEDE; }
 .curso-why-col.com {
   background: linear-gradient(145deg, var(--petrol) 0%, var(--dark) 100%);
