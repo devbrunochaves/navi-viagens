@@ -260,15 +260,19 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   gap: 5px;
   padding: 4px;
   cursor: pointer;
+  position: relative;
+  z-index: 1;
 }
 .nav-toggle span {
   display: block;
   width: 24px; height: 2px;
   background: var(--white);
   border-radius: 2px;
-  transition: var(--transition);
+  transition: transform .35s cubic-bezier(.25,.46,.45,.94), opacity .25s ease, background .4s ease;
+  transform-origin: center;
 }
 #navbar.scrolled .nav-toggle span { background: var(--petrol); }
+#navbar.menu-open.scrolled .nav-toggle span { background: var(--white); }
 
 /* ─── HERO ─── */
 #hero {
@@ -1067,18 +1071,39 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .section { padding: 70px 0; }
   .nav-links, .nav-cta { display: none; }
   .nav-toggle { display: flex; }
+
+  /* Hamburger → X */
+  #navbar.menu-open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #navbar.menu-open .nav-toggle span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  #navbar.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* Compact dropdown — position: absolute evita o bug do backdrop-filter */
   #navbar.menu-open .nav-links {
     display: flex;
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(12,53,71,.97);
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    background: var(--petrol);
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
-    z-index: 998;
+    align-items: stretch;
+    padding: 8px 0 20px;
+    gap: 0;
+    box-shadow: 0 12px 40px rgba(12,53,71,.35);
+    border-top: 1px solid rgba(255,255,255,.1);
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
   }
-  #navbar.menu-open .nav-links a { font-size: 1.3rem; color: var(--white) !important; }
+  #navbar.menu-open .nav-links a {
+    display: block;
+    padding: 14px 28px;
+    font-size: .95rem;
+    font-weight: 500;
+    color: rgba(255,255,255,.88) !important;
+    border-bottom: 1px solid rgba(255,255,255,.07);
+    transition: background .2s ease, color .2s ease;
+  }
+  #navbar.menu-open .nav-links a:hover { background: rgba(255,255,255,.07); color: var(--white) !important; }
+  #navbar.menu-open .nav-links li:last-child a { border-bottom: none; }
   .hero-float-cards { display: none; }
   .experience-inner { grid-template-columns: 1fr; gap: 40px; }
   .exp-grid { grid-template-rows: 200px 160px; }
