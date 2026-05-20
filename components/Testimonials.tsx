@@ -4,14 +4,14 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 
 const testimonials = [
   {
-    image: 'https://images.unsplash.com/photo-1522702462649-b88f82cbb0c3?w=600&q=80&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=600&q=80&auto=format&fit=crop',
     text: 'A NAVI cuidou de cada detalhe da nossa lua de mel nas Maldivas. Desde o transfer até o jantar surpresa no bangalô. Foi perfeito demais.',
     initials: 'CM',
     name: 'Camila & Marco',
     destination: 'Maldivas',
   },
   {
-    image: 'https://images.unsplash.com/photo-1547465376-ff9bc41d6e8a?w=600&q=80&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?w=600&q=80&auto=format&fit=crop',
     text: 'Levamos as crianças pela primeira vez para a Disney. A NAVI organizou tudo: hotel no parque, ingressos, FastPass. Os meninos ainda falam nisso.',
     initials: 'RS',
     name: 'Família Rodrigues',

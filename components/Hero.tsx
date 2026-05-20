@@ -25,7 +25,7 @@ export default function Hero() {
         <div className="hero-content">
           <div className="hero-badge">
             <i className="fas fa-star" />
-            Agência boutique de viagens
+            Agência de Viagens
           </div>
           <h1 className="hero-title">
             Você vive<br /><em>a experiência.</em><br />

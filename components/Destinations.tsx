@@ -11,7 +11,7 @@ const destinations = [
     name: 'Orlando',
     flag: 'América · EUA',
     desc: 'Disney, Universal, SeaWorld e muito mais para toda a família.',
-    image: 'https://images.unsplash.com/photo-1514214246283-d8a07a8fb8ca?w=700&q=80&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=700&q=80&auto=format&fit=crop',
     waText: 'Quero+saber+sobre+Orlando!',
     delay: 'd1',
   },
